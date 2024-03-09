@@ -61,7 +61,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: var(--spacing-sm) 0 0 0;
-  background-color: var(--btn-hover-color);
+  background-color: var(--bg-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,6 +284,7 @@ p {
   background-color: rgba(250, 250, 250, 0.5);
 }
 
+/* *********************** */
 /* HERO SECTION */
 .button-container {
   display: flex;
@@ -308,4 +309,20 @@ p {
 .hero-phone {
   height: 628px;
   transform: translate(32px, -32px);
+}
+
+/* *********************** */
+/* PARTNERS SECTION */
+.partners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: var(--spacing-xl) 0;
+  column-gap: var(--spacing-md);
+  row-gap: var(--spacing-lg);
+}
+
+.partners-grid img {
+  height: 60px;
+  place-self: center;
 }
