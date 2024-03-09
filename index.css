@@ -408,7 +408,6 @@ p {
 
 /* *********************** */
 /* INTEGRATIONS SECTION */
-
 .integrations-section {
   background-color: var(--primary-accent);
   color: var(--text-light);
@@ -446,4 +445,23 @@ p {
 
 #api-code {
   margin: 0 0 var(--spacing-md) 0;
+}
+
+/* *********************** */
+/* WHY SWIPE SECTION */
+.why-swipe-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container .card {
+  width: 25%;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+  box-sizing: border-box;
+}
+
+.why-swipe-section .card-container .card p {
+  font-size: var(--sec-text-size);
+  color: var(--text-dark);
 }
