@@ -12,6 +12,13 @@
   --btn-hover-color: #6d7a88;
   --bg-white: #fff;
   --bg-light: #f7f9fc;
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #07209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
 
   /* FONTS */
   --body-font: "Roboto", sans-serif;
@@ -542,4 +549,133 @@ p {
   opacity: 25%;
   position: absolute;
   top: 10%;
+}
+
+/* *********************** */
+/* VIRTUAL EVENTS SECTION */
+.virtual-events-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: calc(var(--spacing-xl) * 2) 0;
+}
+
+.virtual-events-section .primary-btn {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.virtual-events-section .primary-btn:hover {
+  background-color: var(--primary-accent);
+}
+
+.virtual-events-section .col-left {
+  height: 446px;
+  padding: 0 var(--spacing-xl) 0 0;
+}
+
+.swipe-session-card {
+  width: 540px;
+  height: 446px;
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.swipe-session-card .card-top {
+  background-color: var(--purple-1);
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+.swipe-session-card .card-top::before {
+  background: var(--primary-gradient);
+  content: "";
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  transform: skewY(-5deg);
+  top: -40%;
+  z-index: -2;
+}
+
+.session-logo {
+  width: 338px;
+}
+
+.avatars {
+  position: absolute;
+  bottom: -70px;
+  left: var(--spacing-xl);
+}
+
+.avatars img {
+  width: 80px;
+}
+
+.avatars img:nth-of-type(2) {
+  position: absolute;
+  left: 55px;
+}
+
+.virtual-events-section .card-bottom {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: var(--spacing-xl);
+}
+
+.virtual-events-section .card-bottom .subtitle1 {
+  margin-top: var(--spacing-lg);
+}
+
+.virtual-events-section .card-bottom .secondary-text {
+  color: var(--text-dark);
+  font-weight: 700;
+  width: 50%;
+}
+
+/* *********************** */
+/* VIRTUAL EVENTS SECTION */
+.getting-started-section {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.getting-started-section .primary-btn {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+
+.getting-started-section .primary-btn:hover {
+  background-color: var(--primary-accent);
+}
+
+.getting-started-section .col-left {
+  padding: 0 var(--spacing-xl) 0 0;
+}
+
+.getting-started-section .col-right .card-container {
+  margin: 0 0 0 0;
+}
+
+.getting-started-section .col-right .card {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+}
+
+.getting-started-section .col-right .card .secondary-btn {
+  color: var(--purple-1);
+  padding-left: 0;
+}
+
+.getting-started-section .col-right .card .secondary-btn {
+  color: var(--purple-2);
 }
