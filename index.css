@@ -377,6 +377,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-light);
 }
 
 .unified-platform-section h2 {
@@ -400,6 +401,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-light);
 }
 
 .graphic-grid {
@@ -415,35 +417,46 @@ p {
 #credit-card {
   grid-area: card;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
 }
 
 #slack-invoice {
   grid-area: slack;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
 }
 
 #phone {
   grid-area: phone;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
 }
 
 #dash {
   grid-area: dash;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
 }
 
 /* *********************** */
 /* INTEGRATIONS SECTION */
 .integrations-section {
-  background-color: var(--primary-accent);
+  /* background-color: var(--primary-accent); */
   color: var(--text-light);
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
+  z-index: 1;
+}
+
+.integrations-section::before {
+  content: "";
+  width: 100%;
+  height: 1100px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  z-index: -1;
+  transform: skewY(-10deg);
+  top: -32px;
+  left: 0;
 }
 
 .card-container {
@@ -487,6 +500,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 .why-swipe-section .card-container {
@@ -509,13 +523,24 @@ p {
 /* *********************** */
 /* GLOBAL SECTION */
 .global-section {
-  background-color: var(--primary-accent);
   width: 100%;
   display: flex;
   justify-content: center;
   color: var(--text-light);
   position: relative;
-  padding: calc(var(--spacing-xl) * 3) 0;
+  padding: calc(var(--spacing-xl) * 3) 0 0 0;
+}
+
+.global-section::before {
+  content: "";
+  width: 100%;
+  height: 1200px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  z-index: -1;
+  transform: skewY(-10deg);
+  top: -32px;
+  left: 0;
 }
 
 .global-section a {
@@ -558,6 +583,17 @@ p {
   display: flex;
   justify-content: center;
   padding: calc(var(--spacing-xl) * 2) 0;
+  position: relative;
+}
+
+.virtual-events-section::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  position: absolute;
+  background-color: var(--bg-white);
+  z-index: -1;
 }
 
 .virtual-events-section .primary-btn {
